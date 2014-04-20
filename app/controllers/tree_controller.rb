@@ -1,5 +1,6 @@
 class TreeController < ApplicationController
   def index
+    @judge_count = Judge.count
     data_table = GoogleVisualr::DataTable.new
     data_table.new_column('string', 'Name' )
     data_table.new_column('string', 'Parent')
