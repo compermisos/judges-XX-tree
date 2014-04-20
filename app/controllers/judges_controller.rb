@@ -1,7 +1,7 @@
 class JudgesController < ApplicationController
   before_action :authenticate_user!
   def new
-    @fathers = Judge.where(:level.gte => 2).desc(:asc)
+    @fathers = Judge.asc(:name)
     @judge = Judge.new
   end
   def create
