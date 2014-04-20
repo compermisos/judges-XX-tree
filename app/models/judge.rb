@@ -8,4 +8,12 @@ class Judge
   belongs_to :parent_judge, :class_name => 'Judge', inverse_of: :child_judges
 
   validates_presence_of :name, :level
+
+  def level_output
+    if level == 0
+      "inativo"
+    else
+      "Level #{level}"
+    end
+  end
 end
