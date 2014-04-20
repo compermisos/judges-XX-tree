@@ -16,4 +16,12 @@ class Judge
       "Level #{level}"
     end
   end
+  def name_output
+    name_parts = name.split(' ')
+    if name_parts.count > 2
+      "#{name_parts.first} #{name_parts.last}"
+    else
+      name
+    end
+  end
 end
