@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Judges BR Family Tree</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <%= csrf_meta_tags %>
+  <style>
+  .bs-callout {
+    margin: 20px 0;
+    padding: 15px 30px 15px 15px;
+    border-left: 5px solid #eee;
+  }
+  .bs-callout h4 {
+    margin-top: 0;
+  }
+  .bs-callout p:last-child {
+    margin-bottom: 0;
+  }
+  .bs-callout code,
+  .bs-callout .highlight {
+    background-color: #fff;
+  }
+
+  /* Themes for different contexts */
+  .bs-callout-danger {
+    background-color: #fcf2f2;
+    border-color: #dFb5b4;
+  }
+  .bs-callout-warning {
+    background-color: #fefbed;
+    border-color: #f1e7bc;
+  }
+  .bs-callout-info {
+    background-color: #f0f7fd;
+    border-color: #d0e3f0;
+  }
+  .level{color: blue;text-decoration: italic;font-size: 12px;}
+  .google-visualization-orgchart-node{font-size: 14px !important;padding:5px !important; width: 90px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <%if flash[:error] %>
+    <div class='bs-callout bs-callout-warning'>
+      <h4><%=flash[:error]%></h4>
+    </div>
+    <% end %>
+    <%if flash[:notice] %>
+    <div class='bs-callout bs-callout-info'>
+      <h4><%=flash[:notice]%></h4>
+    </div>
+    <% end %>
+    <%= yield %>
+  </div>
+  <%= yield :javascript %>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<h2>New Judge</h2>
+
+<%=form_for @judge do |f|%>
+<div class="row form-group">
+  <div class="col-md-2">Name</div>
+  <div class="col-md-6"><%=f.text_field :name, class: 'form-control' %></div>
+</div>
+<div class="row form-group">
+  <div class="col-md-2">Level</div>
+  <div class="col-md-6">
+    <%= f.select :level, options_for_select({"1" => 1, "2"=>2, "3" => 3, "4"=>4, "5"=>5, "inativo" => 0}), prompt: 'Level', class: 'form-control'%>
+  </div>
+</div>
+<div class="row form-group">
+  <div class="col-md-2">Father</div>
+  <div class="col-md-6">
+    <%= select_tag 'judge[parent_judge_id]', options_for_select(@fathers.collect{|f| [f.name, f.id]}), prompt: 'Father', class: 'form-control'%>
+ </div>
+</div>
+<div class="row">
+  <div class="col-md-2">
+    <button type="submit" class="btn btn-default">Create</button>
+  </div>
+</div>
+<% end %>

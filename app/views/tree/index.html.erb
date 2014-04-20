@@ -1,0 +1,6 @@
+<h1>Judges BR Family Tree</h1>
+<% if user_signed_in? %>
+  <%=link_to "New Judge", new_judge_path %>
+<% end %>
+<div id="tree"></div>
+<%= render_chart(@chart, 'tree') %>
