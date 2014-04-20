@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Judges BR Family Tree</title>
+  <title>Árvore Genealógica Juízes Magic Brasil</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <meta property="og:title" content="Árvore Genealógica Juízes Magic Brasil"/>
+  <meta property="og:url" content="<%=root_url%>"/>
+  <meta property="og:site_name" content="Juízes Magic Brasil"/>
+  <meta property="og:image" content="<%=asset_url('tree.jpg') %>"/>
   <%= csrf_meta_tags %>
   <style>
   table{border-collapse: initial !important;}
