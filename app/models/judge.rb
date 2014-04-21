@@ -2,7 +2,7 @@ class Judge
   include Mongoid::Document
 
   field :name
-  field :level, type: Fixnum
+  field :level
   field :country, default: 'br'
 
   has_many :child_judges, :class_name => 'Judge', inverse_of: :parent_judge
@@ -18,7 +18,7 @@ class Judge
     if level == 0
       "inativo"
     else
-      "Level #{level}"
+      "Nível #{level}"
     end
   end
   def name_output
