@@ -14,7 +14,7 @@
         <%= select_tag 'judge[level]', options_for_select(Judge.levels, j.level),{class: 'form-control'} %>
       </td>
       <td>
-        <%= select_tag 'judge[parent_judge_id]', options_for_select(@judges.collect{|j| [j.name, j.id]}, j.parent_judge_id),{class: 'form-control'} %>
+        <%= select_tag 'judge[parent_judge_id]', options_for_select(@judges.collect{|j| [j.name, j.id]}, j.parent_judge_id),{class: 'form-control', prompt: 'Father'} %>
       </td>
       <td>
         <%= select_tag 'judge[country]', options_for_select(@countries, j.country.upcase),{class: 'form-control'} %>
