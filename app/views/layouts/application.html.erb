@@ -45,6 +45,7 @@
     border-color: #d0e3f0;
   }
   .level{color: blue;text-decoration: italic;font-size: 12px;}
+  td div.flag{ margin: 0 auto;}
   .google-visualization-orgchart-node{font-size: 14px !important;padding:5px !important; width: 90px;}
   </style>
 </head>
@@ -60,8 +61,11 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <% if user_signed_in? %>
         <ul class="nav navbar-nav">
-          <li class="active">
+          <li>
             <%=link_to "Novo Juiz", new_judge_path%>
+          </li>
+          <li>
+            <%=link_to "Juízes", judges_path%>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

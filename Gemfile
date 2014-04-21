@@ -29,6 +29,7 @@ gem 'devise', '3.1.0'
 gem 'omniauth-facebook', '1.4.0'
 gem 'pry'
 gem "google_visualr", ">= 2.1"
+gem 'iso_country_codes'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

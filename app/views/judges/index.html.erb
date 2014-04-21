@@ -1,0 +1,26 @@
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Level</th>
+    <th>Father</th>
+    <th>Country</th>
+    <th></th>
+  </tr>
+  <%@judges.each do |j|%>
+    <tr>
+      <%= form_for j do |f|%>
+      <td><%=j.name%></td>
+      <td>
+        <%= select_tag 'judge[level]', options_for_select(Judge.levels, j.level),{class: 'form-control'} %>
+      </td>
+      <td>
+        <%= select_tag 'judge[parent_judge_id]', options_for_select(@judges.collect{|j| [j.name, j.id]}, j.parent_judge_id),{class: 'form-control'} %>
+      </td>
+      <td>
+        <%= select_tag 'judge[country]', options_for_select(@countries, j.country.upcase),{class: 'form-control'} %>
+      </td>
+      <td><button type="submit" class="btn btn-primary">Update</button></td>
+      <%end%>
+    </tr>
+  <%end%>
+</table>

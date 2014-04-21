@@ -8,13 +8,19 @@
 <div class="form-group">
   <%=f.label :level, class: "col-sm-2 control-label" %>
   <div class="col-sm-6">
-    <%= select_tag 'judge[level]', options_for_select([1,2,3,4,5,"Inativo"]),{class: 'form-control'} %>    
+    <%= select_tag 'judge[level]', options_for_select(Judge.levels),{class: 'form-control'} %>    
   </div>
 </div>
 <div class="form-group">
   <%= f.label :father, class: "col-sm-2 control-label" %>
   <div class="col-sm-6">
-    <%= select_tag 'judge[parent_judge_id]', options_for_select(@fathers.collect{|f| [f.name, f.id]}),{prompt: 'Father', class: 'form-control'} %>
+    <%= select_tag 'judge[parent_judge_id]', options_for_select(@judges.collect{|f| [f.name, f.id]}),{prompt: 'Father', class: 'form-control'} %>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :country, class: "col-sm-2 control-label" %>
+  <div class="col-sm-6">
+    <%= select_tag 'judge[country]', options_for_select(@countries),{prompt: 'Country', class: 'form-control', selected: 'br'} %>
   </div>
 </div>
 <div class="form-group">
