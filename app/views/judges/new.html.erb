@@ -20,7 +20,7 @@
 <div class="form-group">
   <%= f.label :country, class: "col-sm-2 control-label" %>
   <div class="col-sm-6">
-    <%= select_tag 'judge[country]', options_for_select(@countries),{prompt: 'Country', class: 'form-control', selected: 'br'} %>
+    <%= select_tag 'judge[country]', options_for_select(@countries, 'BR'),{prompt: 'Country', class: 'form-control', selected: 'br'} %>
   </div>
 </div>
 <div class="form-group">
