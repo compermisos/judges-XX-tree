@@ -17,6 +17,8 @@ class Judge
   def level_output
     if level == 0
       "inativo"
+    elsif level == 'Emeritus'
+      level
     else
       "Nível #{level}"
     end
