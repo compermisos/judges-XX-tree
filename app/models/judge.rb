@@ -20,9 +20,7 @@ class Judge
     LEVEL_WORDS[level]
   end
   def level_output
-    if level == 0
-      "inativo"
-    elsif level == 'Emeritus'
+    if level == "Inativo" || level == "Emeritus"
       level
     else
       "Nível #{level}"
