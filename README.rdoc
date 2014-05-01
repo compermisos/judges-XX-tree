@@ -8,8 +8,13 @@ Things you may want to cover:
 * Ruby version
 
 * System dependencies
+you need mongodb
 
 * Configuration
+
+you need execute
+
+heroku config:set MAILER_URL=my-awesome-app.herokuapp.com --app my-awesome-app
 
 * Database creation
 

@@ -80,5 +80,6 @@ JudgesBrFamilyTree::Application.configure do
 
 #compermisos changes
   config.logger = Logger.new(STDOUT)
-  config.action_mailer.default_url_options = { :host => 'mtgjudges-centroamerica.heroku.com' }
+  #config.action_mailer.default_url_options = { :host => 'mtgjudges-centroamerica.heroku.com' }
+  config.action_mailer.default_url_options = { :host => ENV['MAILER_URL'] }
 end
