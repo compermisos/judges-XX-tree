@@ -23,7 +23,7 @@ class Judge
     if level == "Inativo" || level == "Emeritus"
       level
     else
-      "t(:level): #{level}"
+      t(:level, #{level})
     end
   end
   def name_output

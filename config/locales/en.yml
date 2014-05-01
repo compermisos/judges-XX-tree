@@ -27,5 +27,5 @@ en:
   judges_comunity: "your Local Magic Community"
   new_judge: "New Judge"
   log_out: "Log out"
-  level: "Level"
+  level: "Level: %{level}"
 
