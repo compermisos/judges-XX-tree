@@ -68,15 +68,15 @@
         <% if user_signed_in? %>
         <ul class="nav navbar-nav">
           <li>
-            <%=link_to "Novo Juiz", new_judge_path%>
+            <%=link_to t('new_judge'), new_judge_path%>
           </li>
           <li>
-            <%=link_to "Juízes", judges_path%>
+            <%=link_to t('judges'), judges_path%>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <%=link_to "Sair", destroy_user_session_path, method: :delete %>
+            <%=link_to t('log_out'), destroy_user_session_path, method: :delete %>
           </li>
         </ul>
         <% end %>

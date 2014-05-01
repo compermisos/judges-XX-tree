@@ -25,3 +25,6 @@ en:
   web_description: "A local comunity of Magic Judges"
   judges: "Judges"
   judges_comunity: "your Local Magic Community"
+  new_judge: "New Judge"
+  log_out: "Log out"
+
