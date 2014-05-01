@@ -7,7 +7,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <meta property="og:title" content="Árvore Genealógica Juízes Magic Brasil"/>
+  <meta property="og:title" content="<%=t :web_title %>"/>
   <meta property="og:url" content="<%=root_url%>"/>
   <meta property="og:site_name" content="Juízes Magic Brasil"/>
   <meta property="og:image" content="<%=asset_url('tree.jpg') %>"/>
@@ -60,7 +60,7 @@
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <%=link_to "Juízes Magic Brasil", root_path, class:'navbar-brand' %>
+        <%=link_to t('judges_comunity'), root_path, class:'navbar-brand' %>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
